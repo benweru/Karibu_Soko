@@ -1,4 +1,4 @@
-package com.example.karibusoko.ui.theme
+package com.example.theme
 
 import android.app.Activity
 import android.os.Build
