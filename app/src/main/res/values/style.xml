@@ -4,4 +4,11 @@
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">16dp</item>
     </style>
+
+    <style name="TextInputBoxStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/blue_500</item>
+        <item name="hintTextColor">@color/blue_500</item>
+        <item name="boxBackgroundColor">@android:color/darker_gray</item>
+    </style>
+
 </resources>

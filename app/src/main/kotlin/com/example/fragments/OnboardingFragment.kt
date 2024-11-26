@@ -32,7 +32,7 @@ class OnboardingFragment : Fragment() {
 
         // Navigate to Home
         binding.signInButton.setOnClickListener {
-            findNavController().navigate(R.id.action_signInFragment_to_signUpFragment)
+            findNavController().navigate(R.id.action_signUpFragment_to_signInFragment)
         }
     }
 
