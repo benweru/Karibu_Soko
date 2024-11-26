@@ -5,7 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.example.karibusoko.R
 import com.example.karibusoko.databinding.FragmentHomeBinding
+
+
 
 class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
@@ -15,9 +19,11 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _binding =  FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
     }
+
+
 
     override fun onDestroyView() {
         super.onDestroyView()
