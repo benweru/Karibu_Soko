@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/onboarding">
+
+
+    <fragment
+        android:id="@+id/onboarding"
+        android:name="com.example.fragments.OnboardingFragment"
+       >
+        <action
+            android:id="@+id/action_signInFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_signUpFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_signInFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.fragments.SignInFragment"
+        android:label="Sign In" >
+        <action
+            android:id="@+id/action_signInFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_signInFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.fragments.SignUpFragment"
+        android:label="Sign Up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.fragments.HomeFragment"
+        android:label="Home" />
+</navigation>
