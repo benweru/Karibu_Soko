@@ -40,6 +40,17 @@
             android:exported="true"
             android:label="@string/sign_up_activity_label"
             android:theme="@style/Theme.Karibu_Soko" />
+        <activity
+            android:name="com.example.activities.CartActivity"
+            android:exported="true"
+            android:label="Cart"
+            android:theme="@style/Theme.Karibu_Soko" />
+        <activity
+            android:name="com.example.activities.CheckoutActivity"
+            android:exported="true"
+            android:label="Checkout"
+            android:theme="@style/Theme.Karibu_Soko" />
+
     </application>
 
 </manifest>
