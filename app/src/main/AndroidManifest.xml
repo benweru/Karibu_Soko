@@ -50,6 +50,11 @@
             android:exported="true"
             android:label="Checkout"
             android:theme="@style/Theme.Karibu_Soko" />
+        <activity
+            android:name="com.example.activities.ProfileActivity"
+            android:exported="true"
+            android:label="Profile"
+            android:theme="@style/Theme.Karibu_Soko" />
 
     </application>
 
