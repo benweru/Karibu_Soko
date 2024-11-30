@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:startDestination="@id/onboarding">
 
-
     <fragment
         android:id="@+id/onboarding"
         android:name="com.example.fragments.OnboardingFragment"
@@ -16,7 +15,7 @@
             app:destination="@id/signInFragment" />
         <action
             android:id="@+id/action_signInFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            app:destination="@id/mainActivity" />
     </fragment>
 
 
@@ -29,7 +28,7 @@
             app:destination="@id/signUpFragment" />
         <action
             android:id="@+id/action_signInFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            app:destination="@id/mainActivity" />
     </fragment>
 
     <fragment
@@ -44,5 +43,33 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.fragments.HomeFragment"
-        android:label="Home" />
+        android:label="Home">
+
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.example.fragments.CartFragment"
+        android:label="Cart">
+        <action
+            android:id="@+id/cartFragment_to_checkoutFragment"
+            app:destination="@id/checkoutFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/checkoutFragment"
+        android:name="com.example.fragments.CheckoutFragment"
+        android:label="Checkout">
+    </fragment>
+
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.activities.MainActivity"
+        android:label="Home">
+    </activity>
+
 </navigation>

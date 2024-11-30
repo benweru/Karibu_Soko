@@ -7,14 +7,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="blue_500">#4682B4</color> <!-- Steel Blue -->
-    <color name="blue_700">#4169E1</color> <!-- Royal Blue -->
-    <color name="blue_200">#5F9EA0</color> <!-- Cadet Blue -->
-
+    <color name="blue_500">#4682B4</color>
+    <color name="blue_700">#4169E1</color>
+    <color name="blue_200">#5F9EA0</color>
     <color name="orange">#FF6A00</color>
     <color name="gray">#B0B0B0</color>
     <color name="red">#FF0000</color>
     <color name="light_gray">#D3D3D3</color>
-
-
 </resources>

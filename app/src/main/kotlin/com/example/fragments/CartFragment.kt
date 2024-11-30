@@ -7,19 +7,20 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.karibusoko.R
+import com.example.karibusoko.databinding.FragmentCartBinding
 
 import com.example.karibusoko.databinding.FragmentOnboardingBinding
 
 
-class OnboardingFragment : Fragment() {
-    private var _binding: FragmentOnboardingBinding? = null
+class CartFragment : Fragment() {
+    private var _binding: FragmentCartBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding =  FragmentOnboardingBinding.inflate(inflater, container, false)
+        _binding =  FragmentCartBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -27,15 +28,11 @@ class OnboardingFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Navigate to Sign Up
-        binding.signUpButton.setOnClickListener {
-            findNavController().navigate(R.id.action_signInFragment_to_signUpFragment)
+        // Navigate to checkout
+        binding.btnCheckout.setOnClickListener {
+            findNavController().navigate(R.id.cartFragment_to_checkoutFragment)
         }
 
-        // Navigate to Home
-        binding.signInButton.setOnClickListener {
-            findNavController().navigate(R.id.action_signUpFragment_to_signInFragment)
-        }
     }
 
 

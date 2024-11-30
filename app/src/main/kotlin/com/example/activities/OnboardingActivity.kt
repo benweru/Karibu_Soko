@@ -2,20 +2,28 @@ package com.example.activities
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.fragments.OnboardingFragment
-
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.karibusoko.R
 
 class OnboardingActivity : AppCompatActivity() {
+    private lateinit var navController: NavController
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_onboarding)
 
-        // Check if the fragment is already added
-        if (supportFragmentManager.findFragmentById(R.id.onboardingFragmentContainer) == null) {
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.onboardingFragmentContainer, OnboardingFragment())
-                .commit()
-        }
+        val navHostFragment = supportFragmentManager
+            .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        navController = navHostFragment.navController
+
+        setupActionBarWithNavController(navController)
+
+
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        return navController.navigateUp() || super.onSupportNavigateUp()
     }
 }

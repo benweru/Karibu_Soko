@@ -57,10 +57,10 @@ class CartActivity : AppCompatActivity() {
         tvTotalPaymentPrice.text = "KSH. 5300.32"
 
         // Handle checkout button click
-        btnCheckout.setOnClickListener {
-            // Navigate to CheckoutActivity
-            val intent = Intent(this, CheckoutActivity::class.java)
-            startActivity(intent)
-        }
+//        btnCheckout.setOnClickListener {
+//            // Navigate to CheckoutActivity
+//            val intent = Intent(this, CheckoutActivity::class.java)
+//            startActivity(intent)
+//        }
     }
 }

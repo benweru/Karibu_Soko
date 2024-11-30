@@ -10,7 +10,7 @@ import android.content.Intent
 import android.os.Handler
 import android.os.Looper
 import android.util.Log
-import com.example.activities.MainActivity
+import com.example.activities.OnboardingActivity
 
 class SplashActivity : AppCompatActivity() {
 
@@ -31,12 +31,12 @@ class SplashActivity : AppCompatActivity() {
 
             // Stop video and redirect after 3 seconds
             Handler(Looper.getMainLooper()).postDelayed({
-                navigateToMainActivity()
+                navigateToOnboardingActivity()
             }, 3000) // 3000 milliseconds = 3 seconds
         }
 
         videoView.setOnCompletionListener {
-            navigateToMainActivity()
+            navigateToOnboardingActivity()
         }
 
         videoView.setOnErrorListener { _, what, extra ->
@@ -45,8 +45,8 @@ class SplashActivity : AppCompatActivity() {
         }
     }
 
-    private fun navigateToMainActivity() {
-        val intent = Intent (this, MainActivity::class.java)
+    private fun navigateToOnboardingActivity() {
+        val intent = Intent (this, OnboardingActivity::class.java)
         startActivity(intent)
         finish() // Prevent the user from navigating back to the splash screen
     }
