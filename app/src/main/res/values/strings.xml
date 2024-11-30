@@ -5,4 +5,13 @@
     <string name="title_activity_home">HomeActivity</string>
     <string name="sign_in_activity_label">Sign In</string>
     <string name="sign_up_activity_label">Sign Up</string>
+    <string name="product_name">Brown Basket</string>
+    <string name="product_price">KSH. 2400.32</string>
+    <string name="size_label">Size:</string>
+    <string name="add_to_cart">Add to Cart</string>
+    <string name="size_small">S</string>
+    <string name="size_medium">M</string>
+    <string name="size_large">L</string>
+    <string name="size_xlarge">XL</string>
+
 </resources>

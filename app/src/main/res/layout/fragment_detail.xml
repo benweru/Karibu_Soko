@@ -1,0 +1,123 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context="com.example.fragments.DetailFragment">
+
+    <TextView
+        android:id="@+id/headerTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Place order"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="124dp"
+        tools:layout_editor_absoluteY="3dp"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/productImage"
+        android:layout_width="311dp"
+        android:layout_height="342dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="Product Image"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/productName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/RoundedCorners"
+        app:srcCompat="@drawable/item1" />
+
+    <TextView
+        android:id="@+id/productName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/product_name"
+        android:textColor="@color/black"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="135dp"
+        tools:layout_editor_absoluteY="434dp"
+        tools:ignore="MissingConstraints" />
+
+    <!-- Product Price -->
+    <TextView
+        android:id="@+id/productPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/product_price"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/sizeOptions"
+        app:layout_constraintTop_toBottomOf="@+id/productName"
+        tools:layout_editor_absoluteX="157dp"
+        tools:ignore="MissingConstraints" />
+
+    <!-- Size Options -->
+
+    <!-- Add to Cart Button -->
+
+    <TextView
+        android:id="@+id/sizeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/size_label"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/sizeOptions"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="543dp"
+        tools:ignore="MissingConstraints" />
+
+    <RadioGroup
+        android:id="@+id/sizeOptions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="108dp"
+        tools:layout_editor_absoluteY="534dp"
+        tools:ignore="MissingConstraints">
+
+        <RadioButton
+            android:id="@+id/sizeSmall"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="@string/size_small" />
+
+        <RadioButton
+            android:id="@+id/sizeMedium"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="@string/size_medium" />
+
+        <RadioButton
+            android:id="@+id/sizeLarge"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:checked="true"
+            android:text="@string/size_large" />
+
+        <RadioButton
+            android:id="@+id/sizeXLarge"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="@string/size_xlarge" />
+    </RadioGroup>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/addToCartButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/orange"
+        android:text="@string/add_to_cart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sizeOptions"
+        app:shapeAppearanceOverlay="@style/ButtonRoundedShape"
+        tools:layout_editor_absoluteX="150dp"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

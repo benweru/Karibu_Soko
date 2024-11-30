@@ -9,19 +9,20 @@ import androidx.fragment.app.replace
 import androidx.navigation.fragment.findNavController
 import com.example.karibusoko.R
 import com.example.karibusoko.databinding.FragmentCartBinding
+import com.example.karibusoko.databinding.FragmentMyStoreBinding
 
 import com.example.karibusoko.databinding.FragmentOnboardingBinding
 
 
-class CartFragment : Fragment() {
-    private var _binding: FragmentCartBinding? = null
+class MyStoreFragment : Fragment() {
+    private var _binding: FragmentMyStoreBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding =  FragmentCartBinding.inflate(inflater, container, false)
+        _binding =  FragmentMyStoreBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -30,12 +31,12 @@ class CartFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // Navigate to checkout
-        binding.btnCheckout.setOnClickListener {
-           val checkoutFragment = CheckoutFragment()
+        binding.addProductButton.setOnClickListener {
+            val addProductFragment = AddProductFragment()
 
 
             parentFragmentManager.beginTransaction()
-                .replace(R.id.container, checkoutFragment)
+                .replace(R.id.container, addProductFragment)
                 .addToBackStack(null)
                 .commit()
 

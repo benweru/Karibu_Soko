@@ -208,7 +208,7 @@
             android:layout_marginTop="16dp"
             android:text="Pay Now"
             android:textColor="@color/white"
-            android:backgroundTint="@color/orange"
+            android:backgroundTint="@android:color/holo_orange_light"
             android:textStyle="bold"
             android:paddingVertical="12dp" />
     </LinearLayout>

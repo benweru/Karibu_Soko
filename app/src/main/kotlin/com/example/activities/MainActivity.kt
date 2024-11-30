@@ -6,7 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.fragments.CartFragment
 import com.example.fragments.HomeFragment
+import com.example.fragments.MyStoreFragment
 import com.example.fragments.OnboardingFragment
+import com.example.fragments.ProfileFragment
 import com.example.fragments.SignInFragment
 import com.example.karibusoko.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -29,11 +31,11 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 R.id.my_store -> {
-                    replaceFragment(OnboardingFragment())
+                    replaceFragment(MyStoreFragment())
                 }
 
                 R.id.account -> {
-                    replaceFragment(Fragment())
+                    replaceFragment(ProfileFragment())
                 }
                 R.id.shopping_cart -> {
                     replaceFragment(CartFragment())

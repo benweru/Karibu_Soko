@@ -5,23 +5,23 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.replace
 import androidx.navigation.fragment.findNavController
 import com.example.karibusoko.R
-import com.example.karibusoko.databinding.FragmentCartBinding
+import com.example.karibusoko.databinding.FragmentAddProductBinding
+import com.example.karibusoko.databinding.FragmentMyStoreBinding
 
 import com.example.karibusoko.databinding.FragmentOnboardingBinding
 
 
-class CartFragment : Fragment() {
-    private var _binding: FragmentCartBinding? = null
+class AddProductFragment : Fragment() {
+    private var _binding: FragmentAddProductBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding =  FragmentCartBinding.inflate(inflater, container, false)
+        _binding =  FragmentAddProductBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -30,21 +30,20 @@ class CartFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // Navigate to checkout
-        binding.btnCheckout.setOnClickListener {
-           val checkoutFragment = CheckoutFragment()
+        binding.addToMyStoreButton.setOnClickListener {
+            val myStoreFragment = MyStoreFragment()
 
 
             parentFragmentManager.beginTransaction()
-                .replace(R.id.container, checkoutFragment)
+                .replace(R.id.container, myStoreFragment)
                 .addToBackStack(null)
                 .commit()
 
         }
 
+
     }
-
-
-    override fun onDestroyView() {
+        override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }

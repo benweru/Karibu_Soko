@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Back Button and Title -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/back_arrow"
+                android:contentDescription="Back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Profile"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:fontFamily="sans-serif-medium" />
+        </LinearLayout>
+
+        <!-- Profile Picture -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp">
+
+            <ImageView
+                android:id="@+id/profileImage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profile"
+                android:contentDescription="Profile Picture"
+                android:background="@drawable/circle_background" />
+
+            <ImageView
+                android:id="@+id/editProfileImage"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignBottom="@id/profileImage"
+                android:layout_alignEnd="@id/profileImage"
+                android:src="@drawable/edit"
+                android:contentDescription="Edit Profile Picture" />
+        </RelativeLayout>
+
+        <!-- User Name -->
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Esther Mwangi"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:fontFamily="sans-serif-medium" />
+
+        <!-- Menu Items -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="32dp">
+
+            <include layout="@layout/profile_menu_item" android:id="@+id/menuYourProfile" />
+            <include layout="@layout/profile_menu_item" android:id="@+id/menuPaymentMethods" />
+            <include layout="@layout/profile_menu_item" android:id="@+id/menuMyOrders" />
+            <include layout="@layout/profile_menu_item" android:id="@+id/menuSettings" />
+            <include layout="@layout/profile_menu_item" android:id="@+id/menuHelpCenter" />
+            <include layout="@layout/profile_menu_item" android:id="@+id/menuPrivacyPolicy" />
+            <include layout="@layout/profile_menu_item" android:id="@+id/menuInviteFriends" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="16dp"
+                android:background="#E0E0E0" />
+
+            <include layout="@layout/profile_menu_item" android:id="@+id/menuLogout" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

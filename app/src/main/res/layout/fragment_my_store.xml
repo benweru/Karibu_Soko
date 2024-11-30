@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -8,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@android:color/white"
-    tools:context="com.example.fragments.HomeFragment">
+    tools:context="com.example.fragments.MyStoreFragment">
 
     <!-- Header Section -->
     <LinearLayout
@@ -23,7 +22,7 @@
             android:id="@+id/headerTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Explore"
+            android:text="My Store"
             android:textColor="@android:color/black"
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -32,7 +31,7 @@
             android:id="@+id/headerSubtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Best trendy collection!"
+            android:text="Welcome to your store!"
             android:textColor="@android:color/darker_gray"
             android:textSize="16sp" />
     </LinearLayout>
@@ -47,6 +46,7 @@
 
     </HorizontalScrollView>
 
+    <!-- Body Section -->
 
     <GridLayout
         android:id="@+id/gridLayout"
@@ -80,7 +80,7 @@
                     android:layout_height="match_parent"
                     android:clipToOutline="true"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/item1"
+                    android:src="@drawable/item7"
                     app:shapeAppearanceOverlay="@style/RoundedImageView" />
 
                 <!-- Edit Icon -->
@@ -102,7 +102,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="4dp"
-                android:text="Baskets"
+                android:text="Square Mugs"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -112,7 +112,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="KSH. 3,500.00"
+                android:text="KSH. 3,000.00"
                 android:textSize="12sp" />
         </LinearLayout>
 
@@ -135,7 +135,7 @@
                     android:layout_height="match_parent"
                     android:clipToOutline="true"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/item2"
+                    android:src="@drawable/item8"
                     app:shapeAppearanceOverlay="@style/RoundedImageView" />
 
                 <!-- Edit Icon -->
@@ -146,7 +146,7 @@
                     android:layout_gravity="bottom|end"
                     android:layout_margin="8dp"
                     android:src="@drawable/baseline_auto_fix_high_24"
-                    />
+                     />
             </FrameLayout>
 
             <!-- Item Name -->
@@ -156,7 +156,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="4dp"
-                android:text="Set of Round Bowls"
+                android:text="Coasters Set"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -189,7 +189,7 @@
                     android:layout_height="match_parent"
                     android:clipToOutline="true"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/item3"
+                    android:src="@drawable/item9"
                     app:shapeAppearanceOverlay="@style/RoundedImageView" />
 
                 <!-- Edit Icon -->
@@ -200,7 +200,7 @@
                     android:layout_gravity="bottom|end"
                     android:layout_margin="8dp"
                     android:src="@drawable/baseline_auto_fix_high_24"
-                    />
+              />
             </FrameLayout>
 
             <!-- Item Name -->
@@ -210,7 +210,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="4dp"
-                android:text="Bowls"
+                android:text="Green Bowls"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -220,7 +220,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="KSH.1,500.00"
+                android:text="KSH.3,500.00"
                 android:textSize="12sp" />
         </LinearLayout>
 
@@ -242,7 +242,7 @@
                     android:layout_height="match_parent"
                     android:clipToOutline="true"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/item4"
+                    android:src="@drawable/item10"
                     app:shapeAppearanceOverlay="@style/RoundedImageView" />
 
                 <!-- Edit Icon -->
@@ -253,7 +253,7 @@
                     android:layout_gravity="bottom|end"
                     android:layout_margin="8dp"
                     android:src="@drawable/baseline_auto_fix_high_24"
-                    />
+                     />
             </FrameLayout>
 
             <!-- Item Name -->
@@ -263,7 +263,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="4dp"
-                android:text="Measuring cups"
+                android:text="Center Piece Bowl"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -273,7 +273,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="KSH. 1,000.00"
+                android:text="KSH. 5,000.00"
                 android:textSize="12sp" />
         </LinearLayout>
 
@@ -302,7 +302,7 @@
         tools:ignore="MissingConstraints">
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="192dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:backgroundTint="@android:color/holo_orange_light"
@@ -310,39 +310,16 @@
             android:textColor="@android:color/white" />
 
         <Button
-            android:layout_width="wrap_content"
+            android:id="@+id/addProductButton"
+            android:layout_width="218dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
-            android:backgroundTint="@android:color/white"
+            android:backgroundTint="@android:color/holo_orange_light"
             android:elevation="2dp"
-            android:text="Cutlery"
-            android:textColor="@android:color/black" />
+            android:text="Add Product"
+            android:textColor="@android:color/white" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:backgroundTint="@android:color/white"
-            android:elevation="2dp"
-            android:text="Furniture"
-            android:textColor="@android:color/black" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:backgroundTint="@android:color/white"
-            android:elevation="2dp"
-            android:text="Jewelry"
-            android:textColor="@android:color/black" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@android:color/white"
-            android:elevation="2dp"
-            android:text="Other"
-            android:textColor="@android:color/black" />
     </LinearLayout>
 
 

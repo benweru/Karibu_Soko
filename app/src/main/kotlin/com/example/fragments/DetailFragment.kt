@@ -5,23 +5,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.replace
 import androidx.navigation.fragment.findNavController
 import com.example.karibusoko.R
-import com.example.karibusoko.databinding.FragmentCartBinding
-
-import com.example.karibusoko.databinding.FragmentOnboardingBinding
+import com.example.karibusoko.databinding.FragmentDetailBinding
 
 
-class CartFragment : Fragment() {
-    private var _binding: FragmentCartBinding? = null
+class DetailFragment : Fragment() {
+    private var _binding: FragmentDetailBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding =  FragmentCartBinding.inflate(inflater, container, false)
+        _binding =  FragmentDetailBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -29,18 +26,10 @@ class CartFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Navigate to checkout
-        binding.btnCheckout.setOnClickListener {
-           val checkoutFragment = CheckoutFragment()
-
-
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.container, checkoutFragment)
-                .addToBackStack(null)
-                .commit()
-
+        // Navigate to Product detail
+        binding.addToCartButton.setOnClickListener {
+            findNavController().navigate(R.id.addToCartButton)
         }
-
     }
 
 

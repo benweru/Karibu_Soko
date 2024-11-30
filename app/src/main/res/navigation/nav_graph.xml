@@ -60,6 +60,35 @@
     </fragment>
 
     <fragment
+        android:id="@+id/mystoreFragment"
+        android:name="com.example.fragments.MyStoreFragment"
+        android:label="My store">
+        <action
+            android:id="@+id/mystore_to_addproductFragment"
+            app:destination="@id/addProductFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/addProductFragment"
+        android:name="com.example.fragments.AddProductFragment"
+        android:label="Add Product">
+        <action
+            android:id="@+id/addproduct_to_mystore"
+            app:destination="@id/addToMyStoreButton" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.fragments.DetailFragment"
+        android:label="Product ">
+        <action
+            android:id="@+id/addToCartButton"
+            app:destination="@id/cartFragment" />
+    </fragment>
+
+    <fragment
         android:id="@+id/checkoutFragment"
         android:name="com.example.fragments.CheckoutFragment"
         android:label="Checkout">
