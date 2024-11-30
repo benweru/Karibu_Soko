@@ -1,8 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="oval">
-    <solid android:color="#E0E0E0" /> <!-- Background color -->
-    <size
-        android:width="80dp"
-        android:height="80dp" /> <!-- Ensures it matches the image size -->
-</shape>
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:name="vector"
+    android:width="19dp"
+    android:height="19dp"
+    android:viewportWidth="19"
+    android:viewportHeight="19">
+    <path
+        android:name="path"
+        android:pathData="M 9.6 0 C 11.285 0 12.941 0.444 14.4 1.286 C 15.859 2.129 17.071 3.341 17.914 4.8 C 18.756 6.259 19.2 7.915 19.2 9.6 C 19.2 11.285 18.756 12.941 17.914 14.4 C 17.071 15.859 15.859 17.071 14.4 17.914 C 12.941 18.756 11.285 19.2 9.6 19.2 C 7.055 19.2 4.611 18.188 2.812 16.388 C 1.012 14.589 0 12.145 0 9.6 C 0 7.055 1.012 4.611 2.812 2.812 C 4.611 1.012 7.055 0 9.6 0"
+        android:fillColor="#ffffff"/>
+    <group android:name="group">
+        <path
+            android:name="path_1"
+            android:pathData="M 9.6 8.6 C 11.257 8.6 12.6 7.257 12.6 5.6 C 12.6 3.943 11.257 2.6 9.6 2.6 C 7.943 2.6 6.6 3.943 6.6 5.6 C 6.6 7.257 7.943 8.6 9.6 8.6 Z M 15.6 13.6 C 15.6 11.943 14.257 10.6 12.6 10.6 L 6.6 10.6 C 4.943 10.6 3.6 11.943 3.6 13.6 L 3.6 16.6 L 15.6 16.6 L 15.6 13.6 Z"
+            android:fillColor="#000"
+            android:strokeWidth="1"/>
+    </group>
+</vector>
